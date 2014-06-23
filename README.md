@@ -3,7 +3,7 @@
 **Note**: This module was previously known as `puppet-pckeyboardhack`. This is a renamed fork to
 accomodate the name change as of `10.8.0`. The original can be found [here](https://github.com/boxen/puppet-pckeyboardhack).
 
-[![Build Status](https://travis-ci.org/boxen/puppet-seil.png?branch=master)](https://travis-ci.org/boxen/puppet-seil)
+[![Build Status](https://travis-ci.org/boxen/puppet-seil.svg?branch=master)](https://travis-ci.org/boxen/puppet-seil)
 
 Installs [Seil](https://pqrs.org/macosx/keyremap4macbook/seil.html.en) on your Mac.
 
