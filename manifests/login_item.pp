@@ -21,13 +21,13 @@ class seil::login_item($ensure = 'present') {
   osx_login_item { 'Seil':
     ensure  => $ensure,
     path    => $seil::config::app,
-    require => Package['Seil_10.8.0']
+    require => Package["Seil_${seil::config::version}"]
   }
 
   exec { 'launch seil':
     command     => "/usr/bin/open ${seil::config::app}",
     refreshonly => true,
-    subscribe   => Package['Seil_10.8.0'],
+    subscribe   => Package["Seil_${seil::config::version}"],
     require     => Osx_login_item['Seil']
   }
 }
