@@ -1,31 +1,31 @@
-# Public: set identifier to value
+# Public: map identifier to value
 #
-# identifier - the identifier to set. Defaults to title.
-# value - the value to set.
+# identifier - the identifier to map. Defaults to title.
+# value - the value to map.
 #
 # Examples
 #
-#   # set the capslock to 80
-#   seil::set { 'capslock':
+#   # map the capslock to 80
+#   seil::map { 'capslock':
 #     value => '80'
 #   }
 #
 #   # explicitly specify the identifier
-#   seil::set { 'foobar':
+#   seil::map { 'foobar':
 #     identifier => 'capslock',
 #     value      => '80'
 #   }
-define seil::set(
+define seil::map(
   $value,
   $identifier = $title
 ) {
 
-  seil::exec { "seil::set enable_${identifier} 1":
+  seil::exec { "seil::map enable_${identifier} 1":
     command => "set enable_${identifier} 1",
     unless  => "set enable_${identifier} 1"
   }
 
-  seil::exec { "seil::set keycode_${identifier} ${value}":
+  seil::exec { "seil::map keycode_${identifier} ${value}":
     command => "set keycode_${identifier} ${value}",
     unless  => "set keycode_${identifier} ${value}"
   }

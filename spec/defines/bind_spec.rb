@@ -14,7 +14,7 @@ describe 'seil::bind' do
   it do
     should contain_class('seil::config')
 
-    should contain_seil__set('control_l').with({ :value => 80 })
-    should contain_seil__set('command_l').with({ :value => 90 })
+    should contain_seil__map('control_l').with({ :value => 80 })
+    should contain_seil__map('command_l').with({ :value => 90 })
   end
 end

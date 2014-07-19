@@ -4,7 +4,7 @@ describe 'seil::login_item' do
   it do
     should contain_class('seil::config')
 
-    should contain_exec('launch seil').with({
+    should contain_exec('launch seil10.9.0').with({
       :command     => '/usr/bin/open /Applications/Seil.app',
       :refreshonly => true,
       :subscribe   => 'Package[Seil_10.9.0]',

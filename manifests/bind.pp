@@ -6,5 +6,5 @@
 define seil::bind($mappings) {
   include seil::config
 
-  create_resources('seil::set', expand_binding($mappings))
+  create_resources('seil::map', expand_binding($mappings))
 }
