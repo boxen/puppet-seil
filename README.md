@@ -19,6 +19,9 @@ include seil::login_item
 seil::bind { 'keyboard bindings':
   mappings => { 'control_l' => 80 }
 }
+
+# map left control to F19:
+seil::map { 'control_l': value => 80 }
 ```
 
 ## Codes to use in mappings
@@ -88,7 +91,6 @@ To identify keys not listed below, run `defaults read org.pqrs.Seil.plist` and l
 
 * `boxen`
 * `osx`
-* `glarizza/puppet-property_list_key`
 
 ## Development
 

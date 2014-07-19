@@ -24,9 +24,8 @@ class seil::login_item($ensure = 'present') {
     require => Package["Seil_${seil::config::version}"]
   }
 
-  exec { 'launch seil':
-    command     => "/usr/bin/open ${seil::config::app}",
-    refreshonly => true,
+  exec { "launch seil${seil::config::version}":
+    command     => "/usr/bin/open ${seil::config::app}", refreshonly => true,
     subscribe   => Package["Seil_${seil::config::version}"],
     require     => Osx_login_item['Seil']
   }

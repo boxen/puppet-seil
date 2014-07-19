@@ -1,3 +1,2 @@
-mod 'boxen', '1.2.0', :github_tarball             => 'boxen/puppet-boxen'
-mod 'property_list_key', '0.2.0', :github_tarball => 'glarizza/puppet-property_list_key'
+mod 'boxen', '2.1.0', :github_tarball             => 'boxen/puppet-boxen'
 mod 'osx', '1.1.0', :github_tarball               => 'boxen/puppet-osx'
