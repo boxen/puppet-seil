@@ -1,4 +1,4 @@
-# Public: Installs Seil 10.9.0
+# Public: Installs Seil 11.0.0
 #
 # Usage:
 #
