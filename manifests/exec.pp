@@ -24,12 +24,12 @@ define seil::exec($command = $title, $unless = undef, $onlyif = undef) {
 
   $unless_changed = $unless ? {
     undef   => undef,
-    default => "${seil::config::cli} export | grep ${unless}"
+    default => "${seil::config::cli} export | grep \"${unless}\""
   }
 
   $onlyif_changed = $onlyif ? {
     undef   => undef,
-    default => "${seil::config::cli} export | grep ${onlyif}"
+    default => "${seil::config::cli} export | grep \"${onlyif}\""
   }
 
   exec { "seil::exec ${command}":
