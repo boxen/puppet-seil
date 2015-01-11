@@ -47,7 +47,7 @@ describe 'seil::exec' do
       should contain_exec('seil::exec keycode_capslock 80').with({
         :command => "#{cli} keycode_capslock 80",
         :require => "Exec[launch seil#{version}]",
-        :unless => "#{cli} export | grep keycode_capslock 80"
+        :unless => "#{cli} export | grep \"keycode_capslock 80\""
       })
     end
   end
@@ -65,7 +65,7 @@ describe 'seil::exec' do
       should contain_exec('seil::exec keycode_capslock 80').with({
         :command => "#{cli} keycode_capslock 80",
         :require => "Exec[launch seil#{version}]",
-        :onlyif => "#{cli} export | grep keycode_capslock 80"
+        :onlyif => "#{cli} export | grep \"keycode_capslock 80\""
       })
     end
   end
