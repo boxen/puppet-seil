@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'seil::exec' do
-  let(:version) { '11.0.0' }
+  let(:version) { '11.3.0' }
   cli = '/Applications/Seil.app/Contents/Library/bin/seil'
 
   context 'with defaults' do
